@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #a2d9ff, #f1faff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seal-container {
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.seal {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.seal-face {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 80px;
+}
+
+.eye {
+    width: 15px;
+    height: 15px;
+    background: #333;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.eye.left {
+    left: 20px;
+}
+
+.eye.right {
+    right: 20px;
+}
+
+.blush {
+    width: 15px;
+    height: 10px;
+    background: #ffb3c6;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+}
+
+.blush.left {
+    left: 10px;
+}
+
+.blush.right {
+    right: 10px;
+}
+
+.mouth {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 15px;
+    border: 2px solid #333;
+    border-top: none;
+    border-radius: 50%;
+}
+
+.seal-body {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 80px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.seal-tail {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 30px;
+    background: #ffffff;
+    border-radius: 50%;
+    clip-path: polygon(0 100%, 50% 0, 100% 100%);
+}
+
+.chat {
+    margin-top: 50px;
+}
+
+.chat input {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #a2d9ff;
+    border-radius: 20px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.chat button {
+    padding: 10px 20px;
+    border: none;
+    background: #6fc3ff;
+    color: white;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: background 0.3s;
+}
+
+.chat button:hover {
+    background: #5baee0;
+}
+
+#response {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
+}
